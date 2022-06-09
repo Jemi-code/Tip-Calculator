@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body class = "d-flex flex-column justify-content-center align-items-center">
+  <div class="wrapper w-75 container-fluid d-flex flex-column justify-content-center align-items-center">
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo">
+    </div>
+
+    <main class = "container row py-4">
+      <div class="calcLeft col-md-6">
+        <form class = "pe-md-3">
+         <div class="bill mb-5">
+          <label for="bill" class="form-label d-block">Bill</label>
+          <div class="bill-group input-group">
+            <span class="input-group-text"><img src="images/icon-dollar.svg" alt="dollar sign"></span>
+            <input class = "form-control" type="number" name="bill" id="bill" value="0" placeholder="0">
+          </div>
+         </div>
+         <div class="selTip">
+          <h1 class="h5">Select Tip %</h1>
+          <div class="percent">
+            <h2 class="btn" tabindex="1">5%</h2>
+            <h2 class="btn" tabindex="3">10%</h2>
+            <h2 class="btn" tabindex="3">15%</h2>
+            <h2 class="btn" tabindex="4">25%</h2>
+            <h2 class="btn" tabindex="5">50%</h2>
+            <input type="number" class="form-control custom d-inline" placeholder="Custom">
+          </div>
+         </div>
+    
+        <div class="numPep">
+          <label for="people" class="form-label num d-block">Number of People</label>
+          <span class="error text-danger"><small>Can't be zero</small></span>
+          <div class="num-group input-group">
+            <span class = "input-group-text"><img src="images/icon-person.svg" alt=""></span>
+            <input type="number" name="people" class = "form-control" id = "numPep" value="0" placeholder="0">
+          </div>
+        </div>
+        </form>
+      </div>
+    
+      <div class="calcRight col-md-6 d-flex flex-column align-items-start justify-content-between">
+       <div class="disTip w-100 mt-5 px-3">
+        <div class="person mb-5">
+          <div class = "">
+            <p class = "">Tip Amount</p>
+            <small class = "tot">/ person</small>
+          </div>
+          <div class="result">
+            <p>$0.00</p>
+          </div>
+        </div>
+
+        <div class="total w-100">
+          <div class="">
+            <p class="">Total</p>
+          <small class = "tot">/ person</small>
+          </div>
+          <div class="result">
+            <p>$0.00</p>
+          </div>
+        </div>
+       </div>
+    
+       <div class="resTip container-fluid">
+        <p class="btn">Reset</p>
+       </div>
+      </div>
+    </main>
+  </div>
+  <script src="static/js/script.js"></script>
+</body>
+</html>
