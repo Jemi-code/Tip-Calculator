@@ -1,0 +1,179 @@
+@import "custom";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 120vh;
+    background-color: $lgCyan;
+    font-family: $family;
+}
+
+.logo{
+    margin-bottom: 4rem;
+}
+
+main{
+    background-color: $light;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+
+label{
+    color: $dgCyan;
+}
+
+input[type = number]::-webkit-inner-spin-button,
+ input[type = number]::-webkit-outer-spin-button{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+ }
+
+.input-group > .input-group-text{
+    background-color: $lgCyan;
+    border: none;
+}
+
+.input-group > input{
+    border-left: none;
+}
+
+.percent > h2{
+    background-color: $vdCyan;
+    color: white;
+    width: 110px;
+    font-size: $formSize
+}
+
+.percent > h2:hover{
+   background-color: $sCyan; 
+}
+
+.percent > h2:focus{
+    background-color: $sCyan;
+    color: $dark;
+ }
+
+.percent > input{
+    width: 110px;
+}
+
+.percent > input::placeholder{
+    color: hsl(186, 14%, 43%);
+    font-weight: 500;
+}
+
+label, h1{
+    font-size: 13px !important;
+    font-weight: $weight;
+    margin-bottom: 0.5rem !important;
+}
+
+input[type = number], .percent > h6, .percent > input{
+    font-size: $formSize;
+}
+
+input[type = number]{
+    background-color: $lgCyan;
+    outline: none;
+    border: none;
+    text-align: end;
+    color: $vdCyan;
+    font-weight: 700;;
+}
+
+input[type = number]:visited{
+    outline: none !important;
+    border: none !important;
+    background-color: $lgCyan !important;
+}
+
+.error{
+   float: right;
+   position: relative;
+   visibility: hidden;
+}
+
+.num{
+    position: relative;
+    top: 30px;
+}
+
+.calcRight{
+    background-color: $vdCyan;
+    color: $white;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+
+    .disTip{
+
+        .person > div > p, .total > div > p{
+            font-size: 13px;
+            margin-bottom: 0rem !important;
+            font-weight: $weight;
+        }
+    }
+
+    .person, .total{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        small{
+            color: $gCyan;
+            font-weight: 700;
+        }
+    }
+
+    .result{
+        p{
+            font-size: 33px !important;
+            color: $sCyan;
+        }
+    }
+
+    .resTip{
+        p{
+            width: 100%;
+            background-color: $sCyan;
+            color: $vdCyan;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        p:hover{
+            background-color: $lgCyan;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    body{
+        height: 150vh;
+    }
+    .calcRight{
+        margin-top: 2rem;
+    }
+
+    .resTip{
+        margin-top: 2rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .wrapper{
+        width: 100% !important;
+    }
+}
